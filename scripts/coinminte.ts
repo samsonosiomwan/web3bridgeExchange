@@ -8,7 +8,7 @@ async function main() {
   let coinMinter = await (await COIN_MINTER).deploy()
   const amount = ethers.utils.parseUnits("5000", "18")
 
-  await coinMinter.mint(coinMinter.address, amount)
+  await coinMinter.mint("0x3ce75accac8a648e1b2d405e3e14d8b2da5f7656", amount)
   await coinMinter.getBalance(coinMinter.address)
   await coinMinter.deployed()
 
